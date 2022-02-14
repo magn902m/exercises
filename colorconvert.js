@@ -34,9 +34,10 @@ function hexToRGB(hexCode) {
   let r = parseInt(hexCode.substring(1, 3), 16);
   let g = parseInt(hexCode.substring(3, 5), 16);
   let b = parseInt(hexCode.substring(5, 7), 16);
-  //   console.log(`{r: ${r}, g: ${g}, b: ${b}}`);
-  let rgb = { r, g, b };
-  console.log(rgb);
+  console.log(`{r: ${r}, g: ${g}, b: ${b}}`);
+
+  let rgbObj = { r, g, b };
+  console.log(rgbObj);
 }
 
 hexToRGB("#c0ffee");
@@ -50,10 +51,26 @@ hexToRGB("#c0ffee");
 // When complete: add, commit, and paste the js-code as an answer to this exercise!
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 
-//Convert from ineger to hex
-let someNumberAsInteger = 255;
-let someBase16NumberAsString = someNumberAsInteger.toString(16);
-console.log(parseInt("someBase16NumberAsString: ", someBase16NumberAsString));
+// //Convert from ineger to hex
+// let someNumberAsInteger = 255;
+// let someBase16NumberAsString = someNumberAsInteger.toString(16);
+// console.log(parseInt("someBase16NumberAsString: ", someBase16NumberAsString));
+
+function rgbToHex(r, g, b) {
+  console.log("rgbToHex");
+  let hexCode =
+    ("0" + r.toString(16)).slice(-2) +
+    ("0" + g.toString(16)).slice(-2) +
+    ("0" + b.toString(16)).slice(-2);
+  console.log(`#${hexCode}`);
+
+  //   let rValue = ("0" + r.toString(16)).slice(-2);
+  //   let gValue = ("0" + g.toString(16)).slice(-2);
+  //   let bValue = ("0" + b.toString(16)).slice(-2);
+  //   console.log(`#${rValue}${gValue}${bValue}`);
+}
+
+rgbToHex(192, 255, 238);
 
 // --- Exercise - cssToRGB function ---
 // Create a function to convert from a CSS color-definition string, like "rgb(192, 13, 1)" to r, g, and b values (numbers), in this case: 192, 13 and 1 respectively.

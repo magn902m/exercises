@@ -80,3 +80,16 @@ rgbToHex(192, 255, 238);
 // Use substring and/or split, and possibly trim, to get the three values into three separate strings - and use parseInt to convert them into numbers. Create variables for r, g, and b, and console.log them at the end of the function.
 // Test that your code works for both 3, 2, and 1-digit numbers as either r, g and b.
 // When complete: add, commit, and paste the js-code as an answer to this exercise!
+
+function cssToRGB(css) {
+  console.log("cssToRGB");
+  let r = parseInt(css.substring(css.indexOf("(") + 1, css.indexOf(",")).trim());
+  let g = parseInt(css.substring(css.indexOf(" ") + 1, css.lastIndexOf(",")).trim());
+  let b = parseInt(css.substring(css.lastIndexOf(",") + 2, css.lastIndexOf(")")).trim());
+  console.log("r:", r, "g:", g, "b:", b);
+
+  let rgb = { r, g, b };
+  console.log(rgb);
+}
+
+cssToRGB("rgb(192, 13, 1)");

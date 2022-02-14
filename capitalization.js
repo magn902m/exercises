@@ -30,12 +30,12 @@
 // const firstName = `maGnus`;
 // const firstName = `maGnus`;
 // const firstName = `magNus`;
-// const firstName = `mAGNUS`;
+const firstName = `mAGNUS`;
 
 const newName = firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
 
-function callName(myName) {
-  console.log(`My name is ${myName}`);
+function capitalize(str) {
+  console.log(`My name is ${str}`);
 }
 
-callName(newName);
+capitalize(newName);

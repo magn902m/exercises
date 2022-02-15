@@ -17,32 +17,46 @@
 
 // -----
 
-// Capitalization function
-// Put the code you made to capitalize a string (a name) inside a function named capitalize( str ), where str is the parameter, the string you want to capitalize.
-// Capitalization meaning that the first letter is uppercase, and all other letters are lowercase. Don't care about spaces or hyphens, only capitalize the first letter!
-// Make sure that the function creates a new string with the correctly capitalized string, and console.log that new string.
-// Test the function by calling it with various crazy combinations of your own name, like "pETer", "PEter", "peteR", "PEtER" and so on, to make sure it always handles all letters correctly.
-// When complete: add, commit, and paste the js-code as an answer to this exercise!
+// // Capitalization function
+// // Put the code you made to capitalize a string (a name) inside a function named capitalize( str ), where str is the parameter, the string you want to capitalize.
+// // Capitalization meaning that the first letter is uppercase, and all other letters are lowercase. Don't care about spaces or hyphens, only capitalize the first letter!
+// // Make sure that the function creates a new string with the correctly capitalized string, and console.log that new string.
+// // Test the function by calling it with various crazy combinations of your own name, like "pETer", "PEter", "peteR", "PEtER" and so on, to make sure it always handles all letters correctly.
+// // When complete: add, commit, and paste the js-code as an answer to this exercise!
 
-// const firstName = `magnus`;
-// const firstName = `Magnus`;
-// const firstName = `mAgnus`;
-// const firstName = `maGnus`;
-// const firstName = `maGnus`;
-// const firstName = `magNus`;
-const firstName = `mAGNUS`;
+// // const firstName = `magnus`;
+// // const firstName = `Magnus`;
+// // const firstName = `mAgnus`;
+// // const firstName = `maGnus`;
+// // const firstName = `maGnus`;
+// // const firstName = `magNus`;
+// const firstName = `mAGNUS`;
 
-// const newName = firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
+// // const newName = firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
+
+// // function capitalize(str) {
+// //   console.log(`My name is ${str}`);
+// // }
+
+// // capitalize(newName);
 
 // function capitalize(str) {
-//   console.log(`My name is ${str}`);
+//   let capitalizedName = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+//   console.log(`My name is ${capitalizedName}`);
 // }
 
-// capitalize(newName);
+// capitalize(firstName);
+
+// ----- Exercise - capitalize( str ) -----
+
+const name = "pETer";
+const cap = capitalize(name);
 
 function capitalize(str) {
   let capitalizedName = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
-  console.log(`My name is ${capitalizedName}`);
+  // console.log(`My name is ${capitalizedName}`);
+  return `My name is ${capitalizedName}`;
 }
 
-capitalize(firstName);
+console.log(cap);
+// console.log(capitalize(cap));

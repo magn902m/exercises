@@ -74,24 +74,68 @@
 // fullName("Potter", "Harry", "James", "Pottypotpot");
 // // // should console.log "Harry James Potter"
 
-// -----
+// // -----
 
-const aName = "Albus Percival Wulfric Brian Dumbledore";
+// const aName = "Albus Percival Wulfric Brian Dumbledore";
 
-function getNameParts(fullName) {
-  const firstName = fullName.substring(fullName.indexOf(0), fullName.indexOf(" "));
-  const middleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
-  const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
-  console.log({ firstName, middleName, lastName });
-  fullName(lastName, firstName, middleName);
+// function getNameParts(fullName) {
+//   const firstName = fullName.substring(fullName.indexOf(0), fullName.indexOf(" "));
+//   const middleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
+//   const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+//   console.log({ firstName, middleName, lastName });
+//   fullName(lastName, firstName, middleName);
+// }
+
+// function fullName(lastName, firstName, middleName) {
+//   if (middleName) {
+//     console.log(`Fullname: ${firstName} ${middleName} ${lastName}`);
+//   } else {
+//     console.log(`Fullname: ${firstName} ${lastName}`);
+//   }
+// }
+
+// ----- Exercise - fullName( lastName, firstName [, middleName] ) -----
+
+// const name = "pETer";
+// const cap = capitalize(name);
+
+// function capitalize(str) {
+//   let capitalizedName = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+//   // console.log(`My name is ${capitalizedName}`);
+//   return `My name is ${capitalizedName}`;
+// }
+
+// console.log(cap);
+// // console.log(capitalize(cap));
+
+//---
+
+const aName = "ALbus PerCIval wulfric BRIaN dumbLEdOre";
+const nameParts = getNameParts(aName);
+
+function capitalize(str) {
+  let capitalizedStr = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+  return `${capitalizedStr}`;
+}
+
+function getNameParts(inputName) {
+  const firstName = capitalize(inputName.substring(inputName.indexOf(0), inputName.indexOf(" ")));
+  const middleName = capitalize(
+    inputName.substring(inputName.indexOf(" ") + 1, inputName.lastIndexOf(" "))
+  );
+  const lastName = capitalize(inputName.substring(inputName.lastIndexOf(" ") + 1));
+  //console.log({ firstName, middleName, lastName });
+  return fullName(lastName, firstName, middleName);
 }
 
 function fullName(lastName, firstName, middleName) {
+  let theFullName;
   if (middleName) {
-    console.log(`Fullname: ${firstName} ${middleName} ${lastName}`);
+    theFullName = `${firstName} ${middleName} ${lastName}`;
   } else {
-    console.log(`Fullname: ${firstName} ${lastName}`);
+    theFullName = `${firstName} ${lastName}`;
   }
+  return theFullName;
 }
 
-getNameParts(aName);
+console.log(nameParts);

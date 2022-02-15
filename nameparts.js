@@ -108,34 +108,34 @@
 // console.log(cap);
 // // console.log(capitalize(cap));
 
-//---
+// //---
 
-const aName = "ALbus PerCIval wulfric BRIaN dumbLEdOre";
-const nameParts = getNameParts(aName);
+// const aName = "ALbus PerCIval wulfric BRIaN dumbLEdOre";
+// const nameParts = getNameParts(aName);
 
-function capitalize(str) {
-  let capitalizedStr = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
-  return `${capitalizedStr}`;
-}
+// function capitalize(str) {
+//   let capitalizedStr = str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+//   return `${capitalizedStr}`;
+// }
 
-function getNameParts(inputName) {
-  const firstName = capitalize(inputName.substring(inputName.indexOf(0), inputName.indexOf(" ")));
-  const middleName = capitalize(
-    inputName.substring(inputName.indexOf(" ") + 1, inputName.lastIndexOf(" "))
-  );
-  const lastName = capitalize(inputName.substring(inputName.lastIndexOf(" ") + 1));
-  //console.log({ firstName, middleName, lastName });
-  return fullName(lastName, firstName, middleName);
-}
+// function getNameParts(inputName) {
+//   const firstName = capitalize(inputName.substring(inputName.indexOf(0), inputName.indexOf(" ")));
+//   const middleName = capitalize(
+//     inputName.substring(inputName.indexOf(" ") + 1, inputName.lastIndexOf(" "))
+//   );
+//   const lastName = capitalize(inputName.substring(inputName.lastIndexOf(" ") + 1));
+//   //console.log({ firstName, middleName, lastName });
+//   return fullName(lastName, firstName, middleName);
+// }
 
-function fullName(lastName, firstName, middleName) {
-  let theFullName;
-  if (middleName) {
-    theFullName = `${firstName} ${middleName} ${lastName}`;
-  } else {
-    theFullName = `${firstName} ${lastName}`;
-  }
-  return theFullName;
-}
+// function fullName(lastName, firstName, middleName) {
+//   let theFullName;
+//   if (middleName) {
+//     theFullName = `${firstName} ${middleName} ${lastName}`;
+//   } else {
+//     theFullName = `${firstName} ${lastName}`;
+//   }
+//   return theFullName;
+// }
 
-console.log(nameParts);
+// console.log(nameParts);

@@ -17,7 +17,28 @@
 //   }
 // }
 
-// Example – sort by name
+// // Example – sort by name
+
+// const animals = [
+//   { name: "Mandu", type: "cat" },
+//   { name: "Mia", type: "cat" },
+//   { name: "Leeloo", type: "dog" },
+//   { name: "Freddoe", type: "dog" },
+// ];
+// console.log(animals);
+
+// function compareName(a, b) {
+//   if (a.name < b.name) {
+//     return -1;
+//   } else {
+//     return 1;
+//   }
+// }
+
+// animals.sort(compareName);
+// console.log(animals);
+
+// Sorting and filtering
 
 const animals = [
   { name: "Mandu", type: "cat" },
@@ -25,15 +46,13 @@ const animals = [
   { name: "Leeloo", type: "dog" },
   { name: "Freddoe", type: "dog" },
 ];
-console.log(animals);
 
-function compareName(a, b) {
-  if (a.name < b.name) {
-    return -1;
+let filteredArray = animals.filter((animal) => {
+  if (animal.type === "cat") {
+    return true;
   } else {
-    return 1;
+    return false;
   }
-}
+});
 
-animals.sort(compareName);
-console.log(animals);
+console.log("filteredArray: ", filteredArray);
